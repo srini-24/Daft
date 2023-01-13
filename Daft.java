@@ -13,8 +13,8 @@ public class Daft {
 	public static void main(String[] args) throws InterruptedException{
 		//public boolean status=false; 
 		String url="https://www.daft.ie/";
-		String email="rswati605@gmail.com";
-		String password="Vinayak@123";
+		String email="email605@gmail.com";
+		String password="password@123";
 		By acceptall_loc=By.xpath("//button[contains(text(),'Acc')]");
 		By share_loc=By.xpath("//li[contains(text(),'Share')]");
 		By enter_loc=By.xpath("//input[contains(@aria-labelledby,'search')]");
@@ -90,10 +90,10 @@ public class Daft {
 	
 	public static boolean list(WebDriver driver,int list){
 		try{
-//			String email="vinayakpisal7@gmail.com";
-//			String phone="+353892554821";
-			String email="siddharthbhadra09@gmail.com";
-			String phone="+353830875463";
+//			String email="email@gmail.com";
+//			String phone="+353899999996";
+			String email="email09@gmail.com";
+			String phone="+353899999996";
 			By list_loc=By.xpath("//ul[contains(@data-testid,'re')]//li["+list+"]");
 			By email_loc=By.xpath("//button[contains(@aria-label,'Email')]");
 			By send_btn=By.xpath("//button[contains(@aria-label,'Send')]");
