@@ -44,6 +44,7 @@ public class Daft {
 		driver.findElement(login_btn).click();
 		Thread.sleep(3000);
 		
+		//Add location ,Minimum Rent Price,Max Rent Price,Minimum Beds and Max Beds
 		filters(driver,"Dublin 4", "400", "3000", "1", "2");
 		
 		int getsize=driver.findElements(By.xpath("//ul[contains(@data-testid,'re')]//li")).size();
