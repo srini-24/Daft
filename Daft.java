@@ -111,7 +111,7 @@ public class Daft {
 			ScrollUpOrDown(driver, email_loc);
 			driver.findElement(email_loc).click();
 			Thread.sleep(3000);
-			driver.findElement(fullname).sendKeys("Kajal Bhanushali");
+			driver.findElement(fullname).sendKeys("XYZ");
 			Thread.sleep(3000);
 			driver.findElement(youremail_loc).sendKeys(email);
 			Thread.sleep(3000);
