@@ -8,13 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Daft {
+public class Daft2 {
 	public boolean status=false; 
 	public static void main(String[] args) throws InterruptedException{
 		//public boolean status=false; 
 		String url="https://www.daft.ie/";
-		String email="email605@gmail.com";
-		String password="password@123";
+		String email="rswati605@gmail.com";
+		String password="Vinayak@123";
 		By acceptall_loc=By.xpath("//button[contains(text(),'Acc')]");
 		By share_loc=By.xpath("//li[contains(text(),'Share')]");
 		By enter_loc=By.xpath("//input[contains(@aria-labelledby,'search')]");
@@ -44,8 +44,7 @@ public class Daft {
 		driver.findElement(login_btn).click();
 		Thread.sleep(3000);
 		
-		//Add location ,Minimum Rent Price,Max Rent Price,Minimum Beds and Max Beds
-		filters(driver,"Dublin 4", "400", "3000", "1", "2");
+		filters(driver,"Dublin 8", "400", "3000", "1", "2","1","2");
 		
 		int getsize=driver.findElements(By.xpath("//ul[contains(@data-testid,'re')]//li")).size();
 		for(int i=1;i<=getsize;i++){
@@ -91,10 +90,10 @@ public class Daft {
 	
 	public static boolean list(WebDriver driver,int list){
 		try{
-//			String email="email@gmail.com";
-//			String phone="+353899999996";
-			String email="email09@gmail.com";
-			String phone="+353899999996";
+//			String email="vinayakpisal7@gmail.com";
+			String phone="+353892554821";
+			String email="customers.ffhomes@gmail.com";
+//			String phone="+353830875463";
 			By list_loc=By.xpath("//ul[contains(@data-testid,'re')]//li["+list+"]");
 			By email_loc=By.xpath("//button[contains(@aria-label,'Email')]");
 			By send_btn=By.xpath("//button[contains(@aria-label,'Send')]");
@@ -111,15 +110,15 @@ public class Daft {
 			ScrollUpOrDown(driver, email_loc);
 			driver.findElement(email_loc).click();
 			Thread.sleep(3000);
-			driver.findElement(fullname).sendKeys("XYZ");
+			driver.findElement(fullname).sendKeys("Kajal Bhanushali");
 			Thread.sleep(3000);
 			driver.findElement(youremail_loc).sendKeys(email);
 			Thread.sleep(3000);
 			driver.findElement(phone_loc).sendKeys(phone);
 			Thread.sleep(3000);
 			driver.findElement(msg_loc).clear();
-			driver.findElement(msg_loc).sendKeys("Hello , Me and my partner and more 2 our friends are looking for a permanent accommodation. " + '\n' + " We came across your advertisement and we are very much interested in renting it." + '\n' + " We all are  working in the Dublin. " + '\n' + " Earning more than 80000+ euros combinely yearly and can provide pay slips and references." + '\n' + " We are clean, peaceful, vegetarian, non party and non smokers. " + '\n' + " We don’t have pets with us. We maintain the cleanliness standard of the house. " + '\n' + " I would like to know if you can arange viewing." + '\n' + " We can move in immediately as well. " + '\n' + " Thank you, " + '\n' + " XYZ");
-//			driver.findElement(msg_loc).sendKeys("Hello , Me and my fiancé are looking for a permanent accommodation. " + '\n' + " We came across your advertisement and we are very much interested in renting it. " + '\n' + " We both are full time working professionals earning more than 70000+ euros yearly and can provide pay slips and references. " + '\n' + " We are clean, peaceful, vegetarian, non party and non smokers." + '\n' + " We don’t have pets with us. " + '\n' + " We maintain the cleanliness standard of the house. " + '\n' + " I would like to know if there is any possibility that we can have a viewing. " + '\n' + " We can move in immediately as well.  " + '\n' + " Thank you," + '\n' + " XYZ");
+			driver.findElement(msg_loc).sendKeys("Hello , Me and my partner and more 2 our friends are looking for a permanent accommodation. " + '\n' + " We came across your advertisement and we are very much interested in renting it." + '\n' + " We all are  working in the Dublin. " + '\n' + " Earning more than 80000+ euros combinely yearly and can provide pay slips and references." + '\n' + " We are clean, peaceful, vegetarian, non party and non smokers. " + '\n' + " We don’t have pets with us. We maintain the cleanliness standard of the house. " + '\n' + " I would like to know if you can arange viewing." + '\n' + " We can move in immediately as well. " + '\n' + " Thank you, " + '\n' + " Kajal");
+//			driver.findElement(msg_loc).sendKeys("Hello , Me and my fiancé are looking for a permanent accommodation. " + '\n' + " We came across your advertisement and we are very much interested in renting it. " + '\n' + " We both are full time working professionals earning more than 70000+ euros yearly and can provide pay slips and references. " + '\n' + " We are clean, peaceful, vegetarian, non party and non smokers." + '\n' + " We don’t have pets with us. " + '\n' + " We maintain the cleanliness standard of the house. " + '\n' + " I would like to know if there is any possibility that we can have a viewing. " + '\n' + " We can move in immediately as well.  " + '\n' + " Thank you," + '\n' + " Swati");
 			Thread.sleep(3000);
 			driver.findElement(send_btn).click();
 			Thread.sleep(3000);
@@ -159,7 +158,7 @@ public class Daft {
 		return true;
 	}
 	
-public static boolean filters(WebDriver driver,String location,  String maxprice,String minprice,String maxbed,String minbed,String minbath,String maxbath){
+	public static boolean filters(WebDriver driver,String location,  String maxprice,String minprice,String maxbed,String minbed,String minbath,String maxbath){
 		try{
 			By share_loc=By.xpath("//li[contains(text(),'Rent')]");
 			By enter_loc=By.xpath("//input[contains(@aria-labelledby,'search')]");
